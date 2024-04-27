@@ -42,3 +42,18 @@ body {
     background-color: #45a049;
 }
 
+.filter-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333333;
+    border-radius: 5px;
+}
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.genres label {
+    margin-right: 20px;
+}
