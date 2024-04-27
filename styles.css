@@ -4,6 +4,32 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.manga-container {
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.manga-cover {
+    flex: 1 0 calc(25% - 10px);
+    margin: 0 5px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+}
+
+.manga-cover img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
