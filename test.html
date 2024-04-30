@@ -34,30 +34,32 @@
                 <label><input type="checkbox" name="genre" value="adult"> Adult</label>
                 <label><input type="checkbox" name="genre" value="school-life"> School Life</label>
             </div>
+            <button onclick="applyFilters()">Apply</button>
         </div>
         <div class="manga-container" id="mangaContainer">
             <div class="row">
-                <div class="manga-cover">
+                <div class="manga-cover" data-categories="Manga, Action, Adventure">
                     <a href="https://mangapark.net/comic/10953/one-piece" target="_blank">
                         <img src="images/manga1.jpg" alt="Manga 1">
                     </a>
                     <p>Name: One Piece</p>
                     <p>ID: 10953</p>
                 </div>
-                <div class="manga-cover">
+                <div class="manga-cover" data-categories="Manga, Mystery, Psychological">
                     <a href="https://mangapark.net/title/10052-en-death-note" target="_blank">
                         <img src="images/manga2.jpg" alt="Manga 2">
                     </a>
                     <p>Name: Death Note</p>
                     <p>ID: 10052</p>
                 </div>
-                <div class="manga-cover">
+                <div class="manga-cover" data-categories="Manga, Comedy, Family">
                     <a href="https://mangapark.net/title/75008-en-spy-x-family" target="_blank">
                         <img src="images/manga3.jpg" alt="Manga 3">
                     </a>
                     <p>Name: Spy x Family</p>
                     <p>ID: 75008</p>
                 </div>
+                <!-- Add more manga covers as needed -->
             </div>
         </div>
     </div>
@@ -78,8 +80,29 @@
                 }
             }
         }
+
+        function applyFilters() {
+            var selectedGenres = document.querySelectorAll('input[name="genre"]:checked');
+            var mangaContainers = document.getElementsByClassName('manga-container')[0].getElementsByClassName('manga-cover');
+
+            for (var i = 0; i < mangaContainers.length; i++) {
+                var categories = mangaContainers[i].getAttribute('data-categories').toLowerCase().split(', ');
+
+                var showManga = true;
+                selectedGenres.forEach(function(genre) {
+                    if (!categories.includes(genre.value.toLowerCase())) {
+                        showManga = false;
+                    }
+                });
+
+                if (showManga) {
+                    mangaContainers[i].style.display = 'block';
+                } else {
+                    mangaContainers[i].style.display = 'none';
+                }
+            }
+        }
     </script>
 </body>
 
 </html>
-
