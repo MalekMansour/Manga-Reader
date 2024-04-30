@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Reader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Manga Reader</h1>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search..." id="searchInput">
+            <button class="search-btn" onclick="searchManga()">Search</button>
+        </div>
+        <div class="filter-container">
+            <h2>Filter by Genre</h2>
+            <div class="genres">
+                <label><input type="checkbox" name="genre" value="Manga"> Manga</label>
+                <label><input type="checkbox" name="genre" value="Manhwa"> Manhwa</label>
+                <label><input type="checkbox" name="genre" value="romance"> Romance</label>
+                <label><input type="checkbox" name="genre" value="slice-of-life"> Slife Of Life</label>
+                <label><input type="checkbox" name="genre" value="drama"> Drama</label>
+                <label><input type="checkbox" name="genre" value="adventure"> Adventure</label>
+                <label><input type="checkbox" name="genre" value="comedy"> Comedy</label>
+                <label><input type="checkbox" name="genre" value="kids"> Kids</label>
+                <label><input type="checkbox" name="genre" value="horror"> Horror</label>
+                <label><input type="checkbox" name="genre" value="gore"> Gore</label>
+                <label><input type="checkbox" name="genre" value="crime"> Crime</label>
+                <label><input type="checkbox" name="genre" value="sports"> Sports</label>
+                <label><input type="checkbox" name="genre" value="full-color"> Full Color</label>
+                <label><input type="checkbox" name="genre" value="adult"> Adult</label>
+                <label><input type="checkbox" name="genre" value="school-life"> School Life</label>
+            </div>
+        </div>
+        <div class="manga-container" id="mangaContainer">
+            <div class="row">
+                <div class="manga-cover">
+                    <a href="https://mangapark.net/comic/10953/one-piece" target="_blank">
+                        <img src="images/manga1.jpg" alt="Manga 1">
+                    </a>
+                    <p>Name: One Piece</p>
+                    <p>ID: 10953</p>
+                </div>
+                <div class="manga-cover">
+                    <a href="https://mangapark.net/title/10052-en-death-note" target="_blank">
+                        <img src="images/manga2.jpg" alt="Manga 2">
+                    </a>
+                    <p>Name: Death Note</p>
+                    <p>ID: 10052</p>
+                </div>
+                <div class="manga-cover">
+                    <a href="https://mangapark.net/title/75008-en-spy-x-family" target="_blank">
+                        <img src="images/manga3.jpg" alt="Manga 3">
+                    </a>
+                    <p>Name: Spy x Family</p>
+                    <p>ID: 75008</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function searchManga() {
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            var mangaContainers = document.getElementsByClassName('manga-container')[0].getElementsByClassName('manga-cover');
+            
+            for (var i = 0; i < mangaContainers.length; i++) {
+                var name = mangaContainers[i].getElementsByTagName('p')[0].innerText.toLowerCase();
+                var id = mangaContainers[i].getElementsByTagName('p')[1].innerText.toLowerCase();
+                
+                if (name.includes(input) || id.includes(input)) {
+                    mangaContainers[i].style.display = 'block';
+                } else {
+                    mangaContainers[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
 
