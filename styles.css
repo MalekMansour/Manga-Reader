@@ -14,6 +14,13 @@ body {
     margin-bottom: 20px;
 }
 
+.sfw-filter {
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: 20px; 
+}
+
 .search-bar {
     flex: 1;
     display: flex;
