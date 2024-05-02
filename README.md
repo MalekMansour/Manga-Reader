@@ -15,3 +15,11 @@ Manga Reader is a web application for reading manga online. It allows users to b
 - CSS3 (with Flexbox)
 - JavaScript (ES6)
 - External libraries: None
+
+## Getting Started
+
+To get started with Manga Reader, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/manga-reader.git
