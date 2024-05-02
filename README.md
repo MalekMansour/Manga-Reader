@@ -8,3 +8,10 @@ Manga Reader is a web application for reading manga online. It allows users to b
 - Apply filters by genre, type, color, and SFW status
 - Search for specific manga titles
 - Responsive design for mobile and desktop devices
+
+## Technologies Used
+
+- HTML5
+- CSS3 (with Flexbox)
+- JavaScript (ES6)
+- External libraries: None
