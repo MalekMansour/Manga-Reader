@@ -31,3 +31,6 @@ To get started with Manga Reader, follow these steps:
 - Use the filter options to narrow down manga by genre, type, color, and SFW status.
 - Use the search bar to find specific manga titles.
 - Click on a manga cover to read it online.
+
+## Acknowledgements
+- MangaPark for providing manga data and covers.
