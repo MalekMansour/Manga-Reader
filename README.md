@@ -25,3 +25,9 @@ To get started with Manga Reader, follow these steps:
    git clone https://github.com/yourusername/manga-reader.git
 
 2. Open the index.html file in your web browser.
+
+## Usage
+- Browse through the manga collection by scrolling through the covers.
+- Use the filter options to narrow down manga by genre, type, color, and SFW status.
+- Use the search bar to find specific manga titles.
+- Click on a manga cover to read it online.
