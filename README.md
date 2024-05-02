@@ -6,3 +6,4 @@ Manga Reader is a web application for reading manga online. It allows users to b
 
 - Browse and read manga online
 - Apply filters by genre, type, color, and SFW status
+- Search for specific manga titles
