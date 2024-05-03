@@ -2,6 +2,8 @@
 
 Manga Reader by Malek Mansour is a web application for reading manga online. It allows users to browse through a collection of manga titles, apply filters, and search for specific manga.
 
+![Screenshot](screenshots/Screenshot_01.png)
+
 ## Features
 
 - Browse and read manga online
