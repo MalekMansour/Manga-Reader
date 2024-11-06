@@ -24,7 +24,7 @@ To get started with Manga Reader, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/manga-reader.git
+   git clone https://github.com/MalekMansour/Manga-Reader
 
 2. Open the index.html file in your web browser.
 
